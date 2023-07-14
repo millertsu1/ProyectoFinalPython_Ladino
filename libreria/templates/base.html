@@ -1,0 +1,108 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body class="p-0 container-fluid m-0 " style="background-color: #331D2C; color:#EFE1D1;">
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #EFE1D1;box-shadow: 0px 5px 2px #A78295;">
+        <div class="container">
+            <a class="navbar-brand fs-1" href="{% url 'home' %}" >BookStore Academy</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fs-5" id="navbarNav">
+
+                {% with request.resolver_match.url_name as url_name %}
+
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'us' %}">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                      </li>
+
+                    {% if request.user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'books' %}">Books</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'courses' %}">Courses</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="{% url 'insertUrl' %}">Posts</a></li>
+                    {% else %}
+                        <li class="nav-item">  <a class="nav-link" href="{% url 'login' %}"> Login</a></li>
+                        <li class="nav-item">  <a class="nav-link" href="{% url 'register' %}"> Register</a></li>
+                    {% endif%}
+         
+                    {% if request.user.is_authenticated %}
+                    
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle " href="{% url 'profile' %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Bienvenido, {{ user.username | upper }} <img src='{{avatar}}' width='30px'>
+                          </a>
+                          
+                          <ul class="dropdown-menu bg-info-subtle" style="background-color: #A78295;">
+                            <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'exit' %}">Logout</a></li>
+                          </ul>
+                    </li>
+                    
+                    {% endif%}
+
+
+                </ul>
+
+                {% endwith %}
+
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% if messages %}
+        {% for message in messages %}
+           <script>
+            Swal.fire({
+                "title": "Congrats",
+                "text": "{{message}}",
+                "icon": "success",
+                "timer": "2000",
+                "background": "#000 url(/images/trees.png)"
+            })
+           </script>
+        {% endfor %}
+    {% endif %}
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{% extends "base.html" %} 
+{% block title %} Courses {% endblock %} 
+{% block content%}
+<br />
+<br />
+<br />
+{% load static %}
+<div class="card bg-dark">
+  <div class="card-header">
+    <a name="" id="" class="btn btn-success" href="{% url 'create_course' %}" role="button" >Add New Course</a>
+  </div>
+  <div class="card-body shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+    <h4 class="card-title">Courses</h4>
+    <div class="table-responsive">
+      <table class="table table-primary table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for course in courses %}
+
+          <tr class="">
+            <td>{{course.id}}</td>
+            <td>
+              <img src="{{course.image.url}}" alt="{{course.title}}" height="100" />
+            </td>
+            <td>{{course.title}}</td>
+
+            <td>{{course.description}}</td>
+            <td>
+              <a name="" id="" class="btn btn-success" href="{% url 'edit_course' course.id %}" role="button" ><img src="{% static 'libreria/assets/img/edit.png'%}" width="15px"/>Edit</a>
+              |
+              <a name="" id="" class="btn btn-danger" href="{% url 'remove_course' course.id %}" role="button"><img src="{% static 'libreria/assets/img/delete.png'%}" width="15px"/>Remove</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

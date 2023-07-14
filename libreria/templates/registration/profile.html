@@ -1,0 +1,31 @@
+{% extends "../base.html" %}
+
+{% block title %} Profile {% endblock %}
+
+{% block content %}
+
+    <br/>
+    <div class="card mx-auto shadow-sm p-3 mb-5" style="width: 35rem;background-color: #3F2E3E;color: #EFE1D1;">
+        <div class="card-body">
+          <a href="{% url 'changeAvatar' %}" class="card-link"><img src='{{avatar}}' width='80px' class="rounded mx-auto d-block"><a/>
+          <h5 class="card-title text-center">Profile User for {{user.username | upper}}</h5>
+          <ul class="list-group">
+            <small>UserName</small>
+            <li class="list-group-item">{{user.username}}</li>
+            <small>Email</small>
+            <li class="list-group-item">{{user.email}}</li>
+            <small>First Name</small>
+            <li class="list-group-item">{{user.first_name}}</li>
+            <small>Last Name</small>
+            <li class="list-group-item">{{user.last_name}}</li>
+          </ul>
+          <br/>
+          <a href="{% url 'editProfile' %}" class="card-link"><button type="submit" class="button-confirm btn btn-success"> Edit Profile →</button></a>
+          <a href="{% url 'changePassword' %}" class="card-link"><button type="submit" class="button-confirm btn btn-danger"> Change Password →</button></a>
+          <a href="{% url 'changeAvatar' %}" class="card-link"><button type="submit" class="button-confirm btn btn-warning"> Change Avatar →</button></a>
+        
+        </div>
+    </div>
+
+
+{% endblock %}

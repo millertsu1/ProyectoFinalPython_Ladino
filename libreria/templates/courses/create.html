@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} Add New Course {% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<div class="card bg-dark">
+    <div class="card-header">
+        Create a New Course
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Course Data</h4>
+        {% include 'courses/form.html' %}
+    </div>
+    
+</div>
+
+{% endblock %}
