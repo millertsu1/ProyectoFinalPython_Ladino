@@ -213,7 +213,9 @@ def insertPost(request):
 def post(request, pk):
     post = Post.objects.get(id=pk)
     avatar = getavatar(request)
-    context = {'post':post,'avatar':avatar}
+    comments = Comment.objects.filter(post=post)
+    form = PostForm()
+    context = {'post':post,'avatar':avatar, 'comments':comments, 'forms': form}
     return render (request, 'posts/post.html', context)
 
 @login_required
