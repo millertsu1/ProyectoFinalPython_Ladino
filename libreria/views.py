@@ -214,8 +214,8 @@ def post(request, pk):
     post = Post.objects.get(id=pk)
     avatar = getavatar(request)
     comments = Comment.objects.filter(post=post)
-    form = PostForm()
-    context = {'post':post,'avatar':avatar, 'comments':comments, 'forms': form}
+    form = CommentForm()
+    context = {'post':post,'avatar':avatar, 'comments':comments, 'form': form}
     return render (request, 'posts/post.html', context)
 
 @login_required
@@ -241,7 +241,7 @@ def post_detail(request, post_id):
             new_form.post = post
             new_form.save()
     else:
-        form = CommentForm
+        form = CommentForm()
     return render(request, ' posts/post.html',{'post':post,'comments':comments, 'form':form })
 
 
