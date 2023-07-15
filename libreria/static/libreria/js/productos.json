@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "nombre": "Curso de Ingles Tecnico",
+      "precio": 350000,
+      "img":
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1biYggFztLqOEog3gbFRSDSpuxsKGDXJ0XJVs_zTgSu7bSHf4xzRTRoOqErrksrwT9QjFgRC_X8HxrrfiFDQopVVTM-cR-x8H_RuIxBPB__xtcBpn6iKs9qxuiHqW20p6GgOHIxo7LB0FFSgzalxyx1OPHF2BiXAItNKPdByRTLZtKPv10VwEWJae/s1280/English.png",
+        "descripcion": "Aprende de la manos de profesores especializados en la aprendizaje del idioma ingles para uso de profesionales tecnicos.",
+      "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre":  "Aprende a Crear tu  CV",
+        "precio": 159000,
+        "img":
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT8Vd_52oV0EhsQFfrr9iD-OW4oknsC-WEhcqHTohS_U1pZmo6-YmdL9M3HXdi9N8oWK35k4Pc7PGH0D5FJWaH2A3LDJO8xooJrLa2ixi2-5LNu7ixgKjIGRoL2bMxe35bW5K1sb6KQRtZPyIVHzGH6z7Otqtb1NALNZpvHUIz2kPhuOMFTVL-AmmW/s1280/CV.png",
+          "descripcion":  "Prepara tu CV para empresas locales y extranjeras , las tecnicas de escritura y diseno que necesitas para mejorar tu CV",
+        "cantidad": 1
+      },
+    {
+      "id": 3,
+      "nombre": "Curso de Comunicacion Asertiva",
+      "precio": 200000,
+      "img":
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg523UmdAnipqDLohdb_GjuSUrH6J9M7ugcHGCSbNeZAJdeD_hr6l9FaH3yA7lVPp_eZ8n_jsX0hAe2SUS2nwsGVzJ4gKscatCNllaGko4JX-hUlBeLQYvjAq41rNMLfxHYNAGGcWMNUgA5ysUhD8Rsxlp9YON6GWqhT5Towq4tWhpmBIHCQCnYmwey/s1280/asertiva.png",
+        "descripcion": "Aprende a hablar con tu clientes, manejar conversaciones de negocios, hablar en publico y hacer presentaciones",
+      "cantidad": 1
+    },
+    {
+      "id": 4,
+      "nombre": "React desde Cero",
+      "precio": 379000,
+      "img":
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUhtjL4mLqvQHkjsz2daDjXKEV_ZUz-nBOFD_F57XoZWDTFOmKPGU-veRGAIIsUgDVd9u-1xJh6z4m3KEztJ6kB08S2zn8lKzgZ08-VXV1_30dxJ-ZV-XZMlgOiP32i_3IPGufKpk7SzRLHO3QZll3SE-l3KvNQ9D-tfA24ircRNPbjvRT6d3tPO_u/s1280/react.png",
+        "descripcion": "Especializate en la libreria con mas salida laboral del mercado, crea aplicaciones modernas y complementos web de vanguadia",
+      "cantidad": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Curso de Framework Django",
+      "precio": 469000,
+      "img":
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVS4y6DC2PEchleU69DNboJkBJMcKo9IViIJJSKaolJ2JhE1qg-JJ_x31g5jeaC7-18LwBWy-NZJnTZEmDBdFgnupEunXOy2CJRrW88kVxvuiOz9U8E5-W6OSAjMzvB1NfdKZm6yIz4X0Ffpc2gfgYEi9BotyGKwrT4EN80EfTguCmwXCTZX7krt9X/s1280/django.png",
+        "descripcion":"Python es un lenguaje de programación ampliamente utilizado en las aplicaciones web, Ahora podras potenciarlo con el framework especializado para poder crear mas facil tus proyectos",
+      "cantidad": 1
+    },
+    {
+      "id": 6,
+      "nombre": "Curso de Bases de datos con Postgres",
+      "precio": 519000,
+      "img":
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFChQ09yDgKFJ2KiwRHccchgZtsEbfjrUXAVTsFEoKMCiVrJ0Gr1h-gv4Xx4IdRVTD7OvMVfFJxSgC_jIwbr1RGF7yU5Hfsj0rDOb-aj1LQ-4I70BwjiDrdUg7uVusmvsbcpM3b7A1QewF5BdYB67iGuuGQrBvmcNHoPxeb9zTeg3c0cdtsH7PGCbn/s1280/SQL.png",
+        "descripcion":"Si quieres ser un profesional de la programacion integro debes complementar tu aprendizaje con el lenguaje de consulta de bases de datso relacionales, lleva tu carrera al proximo nivel",
+      "cantidad": 1
+    }
+  ]
+  
