@@ -1,0 +1,32 @@
+<form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+  
+    {% for input in form %}
+  
+    <div class="mb-3">
+      <label for="" class="form-label">{{input.label}}</label>
+  
+      {% if input.field.widget.input_type == 'file' and input.value %}
+      <br/>
+      <img src="{{MEDIA_URL}}/images/{{input.value}}" width="120"/>
+      {% endif%}
+      
+      <input 
+      type="{{ input.field.widget.input_type }}" 
+      class="form-control" 
+      name="{{ input.name }}" 
+      id="" 
+      aria-describedby="helpId" 
+      placeholder="{{input.label}}" 
+      value="{{ input.value | default:''}}"
+      >
+  
+    </div>
+  
+    <div class="col-12 help-text"> {{input.errors}} </div>
+  
+    {% endfor %}
+  
+    <input name="" id="" class="btn btn-primary" type="submit" value="Send edited information"></input>
+    <a name="" id="" class="btn btn-warning" href="{% url 'courses'%}" role="button">Cancel Edit</a>
+  </form>

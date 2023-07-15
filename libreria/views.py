@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Book, Course, Avatar, Tag, Post
 from .forms import *
@@ -7,6 +7,7 @@ from django.contrib.auth import logout, authenticate, login, update_session_auth
 from django.contrib.auth.models import User
 from libreria.forms import UserEditForm, ChangePasswordForm, AvatarForm
 from django.contrib import messages
+from django.urls import reverse
 
 # Create your views here.
 
@@ -211,11 +212,12 @@ def insertPost(request):
 
 #@login_required
 def post(request, pk):
-    post = Post.objects.get(id=pk)
+    post = get_object_or_404(Post, id=pk)
+    #post = Post.objects.get(id=pk)
     avatar = getavatar(request)
     comments = Comment.objects.filter(post=post)
     form = CommentForm()
-    context = {'post':post,'avatar':avatar, 'comments':comments, 'form': form}
+    context = {'post':post,'avatar':avatar, 'comments':comments, 'form': form, 'post_id':pk}# Agrega 'post_id' al contexto
     return render (request, 'posts/post.html', context)
 
 @login_required
@@ -240,8 +242,23 @@ def post_detail(request, post_id):
             new_form = form.save(commit=False)
             new_form.post = post
             new_form.save()
+            return redirect('post_detail', post_id=post_id)
+    else:
+        form = CommentForm
+    return render(request, 'posts/post.html',{'post':post,'comments':comments, 'form':form })
+
+#AGREGANDO LA LINEA DE CODERASK
+def comment_view(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return redirect(reverse('post', args=[post_id]))
     else:
         form = CommentForm()
-    return render(request, ' posts/post.html',{'post':post,'comments':comments, 'form':form })
 
-
+    return render(request, 'comment_form.html', {'form': form})

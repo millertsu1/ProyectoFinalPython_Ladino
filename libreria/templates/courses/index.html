@@ -35,9 +35,11 @@
 
             <td>{{course.description}}</td>
             <td>
+              
               <a name="" id="" class="btn btn-success" href="{% url 'edit_course' course.id %}" role="button" ><img src="{% static 'libreria/assets/img/edit.png'%}" width="15px"/>Edit</a>
               |
               <a name="" id="" class="btn btn-danger" href="{% url 'remove_course' course.id %}" role="button"><img src="{% static 'libreria/assets/img/delete.png'%}" width="15px"/>Remove</a>
+              
             </td>
           </tr>
           {% endfor %}

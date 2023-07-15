@@ -76,19 +76,24 @@
 	<hr>
 	<p>{{post.body|safe| slice:"100"}}</p>
 
-	<a href="{%  url 'home' %}" class="btn btn-primary">Return to Home</a>
+	
 	<hr>
 <div>
-	<form method="POST">
+	<form method="POST" action="{% url 'comment_view' post_id %}">
 		{% csrf_token %}
 		{{ form | crispy }}
-		<input type="submit" name='enviar' value="Send Comment">
+		<input style="background-color: #A78295; border: 1px solid #A78295" class="btn btn-primary" type="submit" name='enviar' value="Send Comment">
+		<a href="{%  url 'home' %}" class="btn btn-outline-primary">Return to Home</a>
 	</form>
-
-	<h2>comments: </h2>
-	{% for comment in comments%}
-	<p>{{comment.author}}{{comment.content}}</p>
-	{% endfor %}
+	<hr>
+	<h5 style="border-bottom: 2px solid #EFE1D1; display:inline; margin-bottom: 10px;">comments</h5>
+	<div style="margin-top: 10px;">
+		{% for comment in comments %}
+		<small style=" background-color: #EFE1D1; padding: 2px; color: #000; border-radius: 5px; font-style: italic;">{{comment.created_on}}</small><br>
+		<small style="color: #EFE1D1;font-weight: 700;">{{comment.author}} |</small>
+		<p style="margin-left: 30px;text-transform: lowercase;">{{comment.content}}</p>
+		{% endfor %}
+	</div>
 
 </div>
 

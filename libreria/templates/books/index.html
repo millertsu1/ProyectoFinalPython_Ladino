@@ -7,8 +7,8 @@
 {% load static %}
 <div class="card bg-dark">
   <div class="card-header">
-    <a name=""id="" class="btn btn-primary" href="{% url 'create' %}" role="button" >Add New Book</a
-    >
+    <a name=""id="" class="btn btn-primary" href="{% url 'create' %}" role="button" >Add New Book</a>
+
   </div>
   <div class="card-body shadow-lg p-3 mb-5 bg-body-tertiary rounded">
     <h4 class="card-title">Books</h4>
@@ -38,8 +38,7 @@
             <td>
               <a name="" id="" class="btn btn-success" href="{% url 'edit' book.id %}" role="button" ><img src="{% static 'libreria/assets/img/edit.png'%}" width="15px"/>Edit</a>
               |
-              <a name="" id="" class="btn btn-danger" href="{% url 'remove' book.id %}" role="button"><img src="{% static 'libreria/assets/img/delete.png'%}" width="15px"/>Remove</a
-              >
+              <a name="" id="" class="btn btn-danger" href="{% url 'remove' book.id %}" role="button"><img src="{% static 'libreria/assets/img/delete.png'%}" width="15px"/>Remove</a>
             </td>
           </tr>
           {% endfor %}

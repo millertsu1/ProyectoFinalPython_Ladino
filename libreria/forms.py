@@ -66,3 +66,4 @@ class CommentForm(ModelForm):
     class Meta:
         model = Comment
         fields = ('author','content','active')
+        

@@ -29,6 +29,9 @@ urlpatterns = [
     path('posts/<int:pk>/', views.post, name='post'),
     path('posts/<int:pk>/edit/', views.editPost, name='editUrl'),
 
+    #AGREGANDO PATH CODER
+    path('comments/<int:post_id>/', views.comment_view, name='comment_view')
+
 
 
 

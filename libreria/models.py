@@ -52,6 +52,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        ordering = ['-id']
 
 
 class Comment(models.Model):
@@ -59,7 +62,11 @@ class Comment(models.Model):
     author = models.CharField(max_length=100)
     created_on = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
+    #content = RichTextField(null=True, blank=True)
     active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['-created_on']
 
     def __str__(self):
         return f"comment by {self.author}{self.content}"
