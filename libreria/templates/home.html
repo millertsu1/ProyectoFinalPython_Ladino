@@ -42,24 +42,12 @@
 </section>
 
 
-<div class="carousel-item">
-  {% for post in post %}
-  <img src="{{post.image.url}}" alt="{{post.title}}">
-  <div class="carousel-caption d-none d-md-block">
-    <h5>{{post.title}}</h5>
-    <p>{{tag}}</p>
-  </div>
-  {% endfor %}
-</div>
-
-
-
 <div class="container justify-content-center">
-  <h2 class="text-center p-5">Featured Books</h2>
+  <h2 class="text-center p-5">Books that come in spanish</h2>
 </div>
 {% load static %}
 
-  <main class="container"></main>
+<main class="container" style="display:flex; justify-content:center;flex-wrap: wrap; gap: 30px;"></main>
 
 
 

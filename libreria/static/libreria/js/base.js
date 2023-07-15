@@ -5,13 +5,19 @@ fetch("../static/libreria/js/productos.json")
     response.forEach((product) => {
       const article = document.createRange().createContextualFragment(
         `
-    <div class="main-container">
-        <div class="main-container container d-flex justify-content-center gap-4 flex-wrap">
-            <div class="card bg-dark" style="width: 17rem;">
-                <img class="card-img-top" src="${product.img}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">${product.nombre}</h5>
-                    <p class="card-text">${product.descripcion}</p>
+    
+
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card bg-dark" style="width: 20rem;">
+                    <img class="card-img-top" src="${product.img}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.nombre}</h5>
+                        <hr>
+                        <p class="card-text">${product.descripcion}</p>
+                    </div>
                 </div>
             </div>
         </div>
