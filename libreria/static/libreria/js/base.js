@@ -29,5 +29,3 @@ fetch("../static/libreria/js/productos.json")
       main.append(article);
     });
   });
-
-  console.log('hola inmundo');

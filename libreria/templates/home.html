@@ -7,9 +7,8 @@
 <div class="p-5 mb-4 rounded-3" style="background-color:#331D2C;">
   <div class="container-fluid py-5" style="background-color:#331D2C;">
     <h1 class="display-5 fw-bold">Welcome to Bookstore Academy</h1>
-    <p class="col-md-8 fs-4">you can use the bookstore to add, edit and delete books from your library, and share your
-      own list of the best books</p>
-    <button class="btn btn-outline-primary btn-lg" type="button">Learn More</button>
+    <p class="col-md-8 fs-4">"Welcome to the Bookstore Academy Blog, your gateway to the latest insights on technology, science, and so much more. Explore our curated collection of articles and stay up-to-date with the ever-evolving world. From cutting-edge innovations to thought-provoking discussions, our blog offers a diverse range of topics to satisfy your thirst for knowledge. Join us on this intellectual journey and expand your horizons with the Bookstore Academy Blog."</p>
+    <a href="{% url 'blog' %}" class="btn btn-outline-light btn-floating m-1">Learn More</a> 
   </div>
 </div>
 
@@ -32,7 +31,7 @@
             {% endfor %}
             <hr>
             <p class="card-text">{{post.body|safe|slice:":100"}}</p> 
-            <a href="{%  url 'post' post.id %}" class="btn btn-primary">Read More...</a>
+            <a href="{%  url 'post' post.id %}" class="btn btn-outline-light btn-floating m-1">Read More...</a>
             
           </div>
         </div>
@@ -41,14 +40,11 @@
     </div>
 </section>
 
-
 <div class="container justify-content-center">
-  <h2 class="text-center p-5">Books that come in spanish</h2>
+  <h2 class="text-center p-5">Courses that come in Spanish</h2>
 </div>
 {% load static %}
 
 <main class="container" style="display:flex; justify-content:center;flex-wrap: wrap; gap: 30px;"></main>
-
-
 
 {% endblock %}

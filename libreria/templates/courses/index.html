@@ -7,7 +7,7 @@
 {% load static %}
 <div class="card bg-dark">
   <div class="card-header">
-    <a name="" id="" class="btn btn-success" href="{% url 'create_course' %}" role="button" >Add New Course</a>
+    <a name="" id="" class="btn btn-outline-light btn-floating m-1" href="{% url 'create_course' %}" role="button" >Add New Course</a>
   </div>
   <div class="card-body shadow-lg p-3 mb-5 bg-body-tertiary rounded">
     <h4 class="card-title">Courses</h4>
@@ -36,9 +36,9 @@
             <td>{{course.description}}</td>
             <td>
               
-              <a name="" id="" class="btn btn-success" href="{% url 'edit_course' course.id %}" role="button" ><img src="{% static 'libreria/assets/img/edit.png'%}" width="15px"/>Edit</a>
+              <a name="" id="" class="btn btn-light btn-floating m-1" href="{% url 'edit_course' course.id %}" role="button" ><img src="{% static 'libreria/assets/img/edit.png'%}" width="15px"/>Edit</a>
               |
-              <a name="" id="" class="btn btn-danger" href="{% url 'remove_course' course.id %}" role="button"><img src="{% static 'libreria/assets/img/delete.png'%}" width="15px"/>Remove</a>
+              <a name="" id="" class="btn btn-light btn-floating m-1" href="{% url 'remove_course' course.id %}" role="button"><img src="{% static 'libreria/assets/img/delete.png'%}" width="15px"/>Remove</a>
               
             </td>
           </tr>

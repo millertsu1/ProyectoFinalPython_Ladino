@@ -82,8 +82,8 @@
 	<form method="POST" action="{% url 'comment_view' post_id %}">
 		{% csrf_token %}
 		{{ form | crispy }}
-		<input style="background-color: #A78295; border: 1px solid #A78295" class="btn btn-primary" type="submit" name='enviar' value="Send Comment">
-		<a href="{%  url 'home' %}" class="btn btn-outline-primary">Return to Home</a>
+		<input class="btn btn-outline-light btn-floating m-1" type="submit" name='enviar' value="Send Comment">
+		<a href="{%  url 'home' %}" class="btn btn-outline-light btn-floating m-1">Return to Home</a>
 	</form>
 	<hr>
 	<h5 style="border-bottom: 2px solid #EFE1D1; display:inline; margin-bottom: 10px;">comments</h5>

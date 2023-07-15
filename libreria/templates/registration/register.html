@@ -8,12 +8,12 @@
     <br/>
     <form class="form" action="" method="post">
         {% csrf_token %}
-        <div class="card mx-auto bg-dark  shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 30rem;">
+        <div class="card mx-auto p-3 mb-5 bg-body-tertiary rounded" style="width: 30rem; background-color: #3F2E3E; color: #EFE1D1;">
           <div class="card-body">
             <h3 class="card-title text-center ">Register Form</h3>
             <h6 class="text-center">Complete all inputs</h6>
             {{ form | crispy }}
-            <button type="submit" class="button-confirm">Register →</button>
+            <button type="submit" class="btn btn-outline-light btn-floating m-1">Register →</button>
             <p class="mt-20">Have already an account? <a href="{% url 'login'%}" class="card-link">Login</a>
           </div>
         </div>

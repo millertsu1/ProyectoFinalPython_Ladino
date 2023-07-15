@@ -44,8 +44,8 @@
 
                         <li class="nav-item"><a class="nav-link" href="{% url 'insertUrl' %}">Posts</a></li>
                     {% else %}
-                        <li class="nav-item">  <a class="nav-link" href="{% url 'login' %}"> Login</a></li>
-                        <li class="nav-item">  <a class="nav-link" href="{% url 'register' %}"> Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}"> Register</a></li>
                     {% endif%}
          
                     {% if request.user.is_authenticated %}
@@ -81,16 +81,9 @@
         
     </div>
 
-    {% comment %} footer {% endcomment %}
 
-
-    <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container-fluid my-5">
     <!-- Footer -->
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background-color: #3e4551"
-            >
+    <footer class="text-center text-lg-start text-black" style="background-color: #A78295; margin-top: 100px;">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Links -->
@@ -98,18 +91,17 @@
           <!--Grid row-->
           <div class="row">
             <!--Grid column-->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-8 col-md-6 mb-4 mb-md-0">
               <h5 class="fs-1">BookStore Academy</h5>
-  
               <p>
-                you can use the bookstore to add, edit and delete books from your library, and share your own list of the best books
+                The BookStore Academy is a unique and specialized institution that combines a passion for books with high-quality education. Our focus is on fostering literacy, creativity, and a love for reading in a welcoming and stimulating environment. With a team of passionate educators and a wide selection of literary resources, we provide our students with an enriching and unparalleled educational experience in the world of books.
               </p>
             </div>
             <!--Grid column-->
   
             <!--Grid column-->
             <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-capitalize">Links of interest</h5>
   
               <ul class="list-unstyled mb-0">
                 <li>
@@ -133,80 +125,34 @@
         </section>
         <!-- Section: Links -->
   
-        <hr class="mb-4" />
   
-        <!-- Section: CTA -->
-        <section class="">
-          <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Register for free</span>
-            
-              <a href="{% url 'register' %}" type="button" class="btn btn-outline-light btn-rounded">Sign up!</a>
-            
-          </p>
-        </section>
-        <!-- Section: CTA -->
+        
   
         <hr class="mb-4" />
   
         <!-- Section: Social media -->
         <section class="mb-4 text-center">
 
-          <!-- Facebook -->
-          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" ><img src="{% static '../images/github.svg' %}" alt="Icono de GitHub" width="500">
-          </a>
   
           <!-- Twitter -->
-          <a
-             class="btn btn-outline-light btn-floating m-1"
-             href="#!"
-             role="button"
-             ><img src="{% static 'images/github.png' %}" alt="Icono de GitHub" width="500"></i
-            ></a>
-  
-          <!-- Google -->
-          <a
-             class="btn btn-outline-light btn-floating m-1"
-             href="#!"
-             role="button"
-             ><i class="fab fa-google"></i
-            ></a>
-  
-          <!-- Instagram -->
-          <a
-             class="btn btn-outline-light btn-floating m-1"
-             href="#!"
-             role="button"
-             ><i class="fab fa-instagram"></i
-            ></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/selodigodenuevo"  target="_blank" role="button" ><img src="{% static 'images/twitter.png' %}" alt="Icono de GitHub" width="20"></a>
   
           <!-- Linkedin -->
-          <a
-             class="btn btn-outline-light btn-floating m-1"
-             href="#!"
-             role="button"
-             ><i class="fab fa-linkedin-in"></i
-            ></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/miller-systemsengineer/" target="_blank" role="button" ><img src="{% static 'images/linkedin.png' %}" alt="Icono de GitHub" width="20"></a>
   
           <!-- Github -->
-          <a
-             class="btn btn-outline-light btn-floating m-1"
-             href="#!"
-             role="button"
-             ><i class="fab fa-github"></i
-            ></a>
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/millertsu1" target="_blank" role="button"><img src="{% static 'images/github.png' %}" alt="Icono de GitHub" width="20" >
+          </a>
         </section>
         <!-- Section: Social media -->
       </div>
       <!-- Grid container -->
   
       <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-           >MDBootstrap.com</a
+      <div class="text-center p-3" style="background-color: #331D2C">
+        <span style="color: #EFE1D1">2020 Copyright: © </span>
+        <a class="text-white" href="https://fokiukode.blogspot.com/"
+           >FokiuCode</a
           >
       </div>
       <!-- Copyright -->
@@ -215,7 +161,6 @@
   </div>
   <!-- End of .container -->
 
-    {% comment %} endfooter {% endcomment %}
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     {% if messages %}

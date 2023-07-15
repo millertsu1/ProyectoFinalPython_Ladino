@@ -34,7 +34,7 @@
                 {% endfor %}
                 <hr>
                 <p class="card-text">{{post.body|safe|slice:":100"}}</p> 
-                <a href="{%  url 'post' post.id %}" class="btn btn-primary">Read More...</a>
+                <a href="{%  url 'post' post.id %}" class="btn btn-outline-light btn-floating m-1">Read More...</a>
                 
               </div>
             </div>

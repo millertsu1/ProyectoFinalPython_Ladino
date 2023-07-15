@@ -8,14 +8,14 @@
     <br/>
     <form class="form" enctype="multipart/form-data" method="post">
         {% csrf_token %}
-        <div class="card mx-auto bg-dark  shadow-sm p-3 mb-5 bg-body-tertiary rounded" style="width: 30rem;">
+        <div class="card mx-auto p-3 mb-5 bg-body-tertiary rounded" style="width: 30rem; background-color: #3F2E3E; color: #EFE1D1;">
           <div class="card-body">
             <img src='{{avatar}}' width='80px' class="rounded mx-auto d-block">
             <h3 class="card-title text-center ">Changing Avatar for {{user.username}}</h3>
             <h6 class="text-center">You can edit or create your avatar</h6>
             {{ form | crispy }}
-            <button type="submit" class="button-confirm btn btn-primary">Send Changes →</button>
-            <a class="btn btn-outline-success" href="{% url 'profile' %}">Return to Profile →</a></li>
+            <button type="submit" class="button-confirm btn btn-outline-light btn-floating m-1">Send Changes →</button>
+            <a class="btn btn-outline-light btn-floating m-1" href="{% url 'profile' %}">Return to Profile →</a></li>
           </div>
         </div>
 
