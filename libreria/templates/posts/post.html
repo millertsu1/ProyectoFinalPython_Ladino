@@ -88,11 +88,15 @@
 	<hr>
 	<h5 style="border-bottom: 2px solid #EFE1D1; display:inline; margin-bottom: 10px;">comments</h5>
 	<div style="margin-top: 10px;">
-		{% for comment in comments %}
-		<small style=" background-color: #EFE1D1; padding: 2px; color: #000; border-radius: 5px; font-style: italic;">{{comment.created_on}}</small><br>
-		<small style="color: #EFE1D1;font-weight: 700;">{{comment.author}} |</small>
-		<p style="margin-left: 30px;text-transform: lowercase;">{{comment.content}}</p>
-		{% endfor %}
+		{% if comments %}
+			{% for comment in comments %}
+			<small style=" background-color: #EFE1D1; padding: 2px; color: #000; border-radius: 5px; font-style: italic;">{{comment.created_on}}</small><br>
+			<small style="color: #EFE1D1;font-weight: 700;">{{comment.author}} |</small>
+			<p style="margin-left: 30px;text-transform: lowercase;">{{comment.content}}</p>
+			{% endfor %}
+		{% else %}
+  			<p>There are no comments yet.</p>
+		{% endif %}
 	</div>
 
 </div>
