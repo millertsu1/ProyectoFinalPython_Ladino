@@ -5,20 +5,100 @@
 {% block content %}
 {% load static %}
 
-<div class="container-fluid d-flex justify-content-center gap-5">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{% static 'libreria/assets/img/slide1.jpg'%}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{% static 'libreria/assets/img/slide2.jpg'%}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="{% static 'libreria/assets/img/courses1.jpg'%}" class="d-block w-100" alt="...">
-          </div>
-          
+
+   
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-dark border-bottom mb-4" style="background-color: #3F2E3E; color: #EFE1D1;">
+            <div class="container" >
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Miller Ladino Osorio Project</h1>
+                    <p class="lead mb-0">The idea of this project arises to test the knowledge of the learned of the Python programming language and applied with the Django framework.</p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4" style="background-color: #3F2E3E; color: #EFE1D1;">
+                        <a href="#!"><img class="card-img-top" src="{% static 'images/MillerLadino.png' %}" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-white">Who I am?</div>
+                            <h2 class="card-title">Web Developer</h2>
+                            <p class="card-text">I am Colombian, and I live in the city of Bogota, I am a systems engineer graduated in 2020, with experience in networking, databases and customer service.</p>
+                            <p class="card-text">Since 2022, I have worked to become a web developer, I have taken several courses in Development, with Core languages, such as HTML, CSS and Java Script, additionally on my own, I am currently studying the React library. Now it was the turn of Python with Django, it has been a great experience to develop these skills.</p>
+                            {% comment %} redes sociales {% endcomment %}
+                            <section class="mb-4 text-center">
+
+  
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/selodigodenuevo"  target="_blank" role="button" ><img src="{% static 'images/twitter.png' %}" alt="Icono de GitHub" width="40"></a>
+  
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/miller-systemsengineer/" target="_blank" role="button" ><img src="{% static 'images/linkedin.png' %}" alt="Icono de GitHub" width="40"></a>
+  
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/millertsu1" target="_blank" role="button"><img src="{% static 'images/github.png' %}" alt="Icono de GitHub" width="40" >
+          </a>
+        </section>
+                        </div>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                    
+                    
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4 bg-dark">
+                    
+                    <!-- Categories widget-->
+                    <div class="card mb-4 bg-dark">
+                        <div class="card-header" style=" background-color: #3F2E3E; color: #EFE1D1;font-weight: 700;">Skills</div>
+                        <div class="card-body" style=" background-color: #3F2E3E;">
+                            <div class="row" >
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Web Design</li>
+                                        <li>HTML</li>
+                                        <li>Python-Django</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>JavaScript</li>
+                                        <li>CSS</li>
+                                        <li>Tutorials</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4 bg-dark">
+                        <div class="card-header" style=" background-color: #3F2E3E; color: #EFE1D1;font-weight: 700;">Soft skills</div>
+                        <div class="card-body" style=" background-color: #3F2E3E;">
+                        <div class="row" >
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Communication</li>
+                                        <li>Emotional Intelligence</li>
+                                        <li>Problem-solving</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Leadership</li>
+                                        <li>Time Management</li>
+                                        <li>Collaboration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-</div>
+        
+
 {% endblock %}
