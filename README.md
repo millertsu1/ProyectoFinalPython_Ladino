@@ -2,7 +2,7 @@
 
 El proyecto es un blog, tiene muchas funcionalidades, blog, edicion(post, agregar cursos, agregar libros), gestion de usuarios( creacion de usuario mediante el registro) y la autenticacion de usuarios.
 
-Link al video demostracion 3min: *******
+Link al video demostracion 3min: https://drive.google.com/file/d/1C1_8yGL9J1HOisPSATydQOOBdh-R3wky/view?usp=sharing
 
 ## Características
 
